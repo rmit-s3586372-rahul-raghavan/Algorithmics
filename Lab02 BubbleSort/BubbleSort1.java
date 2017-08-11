@@ -36,10 +36,17 @@ public class BubbleSort1
         ArrayList<Integer> array = BubbleSortUtils.getInput();
          
         // sort
+        long startTime = System.nanoTime();
         sorter.sort(array);
+	long endTime = System.nanoTime();
+
+	double estimatedTime = ((double)(endTime - startTime))/Math.pow(10,9);
         
+	// Print out time taken
+	System.out.println("Time taken to sort: " + estimatedTime + "sec");	
+
         // print out sorted array
-        BubbleSortUtils.print(array);   
+        //BubbleSortUtils.print(array);   
     }  // end of main()
     
 } // end of class BubbleSort1
